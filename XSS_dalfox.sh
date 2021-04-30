@@ -1,5 +1,6 @@
 #!/bin/bash
 #use: ./XSS_dalfox.sh domain.com
+#Scans all subdomains as well
 
 echo ' Gau execution'
 echo $1 | gau -subs | egrep -o "http?.*" | grep "="| egrep -v ".(jpg|jpeg|gif|css|tif|tiff|png|ttf|woff|woff2|ico|pdf|svg|txt|js)" >> $1.txt
